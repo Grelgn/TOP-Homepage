@@ -1,5 +1,7 @@
 body {
 	height: 100svh;
+	width: 100%;
+	/* overflow-x: hidden; */
 	margin: 0;
 	display: grid;
 	font-family: Roboto;
@@ -85,7 +87,7 @@ main {
 }
 
 .p-desc {
-	padding: 10px 20px;
+	padding: 10px 30px;
 }
 
 .p-desc > p {
@@ -98,7 +100,30 @@ h3 {
 }
 
 footer {
-	background-color: azure;
+	background-color: #0891b2;
+	color: white;
+	display: grid;
+	grid-auto-flow: column;
+	padding: 50px;
+	justify-content: center;
+	gap: 150px;
+}
+
+footer p {
+	color: white;
+}
+
+.contact {
+	width: 300px;
+}
+
+.c-image {
+	height: 340px;
+	width: 500px;
+	background-image: url(placeholder.jpg);
+	background-size: cover;
+	background-position: center;
+	margin-top: 20px;
 }
 
 @media (max-width: 1100px) {
@@ -147,9 +172,19 @@ footer {
 	.projects {
 		grid-template-columns: 1fr 1fr;
 	}
+
+	.c-image {
+		height: 380px;
+		width: 280px;
+		margin-top: -10px;
+	}
+
+	footer {
+		gap: 25px;
+	}
 }
 
-@media (max-width: 710px) {
+@media (max-width: 720px) {
 	.image {
 		width: 280px;
 		height: 450px;
@@ -179,14 +214,43 @@ footer {
 	}
 
 	main {
-		margin: 500px 0 150px 0;
+		margin: 550px 0 100px 0;
 	}
 
 	.projects {
+		margin-left: 20px;
 		grid-template-columns: 1fr;
 	}
 
-    main > h2 {
-        padding-left: 60px;
-    }
+	main > h2 {
+		padding-left: 80px;
+	}
+
+	footer {
+		grid-auto-flow: row;
+		padding: 20px;
+		padding-bottom: 0;
+		/* width: 100svw; */
+	}
+
+	footer h2 {
+		transform: translate(10%);
+		font-size: 46px;
+	}
+
+	.contact p:first-of-type {
+		font-size: 22px;
+	}
+
+	.contact {
+		padding: 10px 0 150px 0;
+	}
+
+	.c-image {
+		background-size: cover;
+		position: absolute;
+		transform: translate(-20px, 520px);
+		height: 500px;
+		width: 100%;
+	}
 }
